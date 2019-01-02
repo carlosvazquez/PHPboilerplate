@@ -1,0 +1,19 @@
+{
+    "name": "carlosvazquezm/phpboilerplate",
+    "description": "PHP boilerplate for small projects",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Carlos Vazquez",
+            "email": "carlosvazquez@outlook.com"
+        }
+    ],
+    "minimum-stability": "RC",
+    "require": {},
+    "autoload": {
+        "classmap": [
+            "./"
+        ]
+    }
+}
