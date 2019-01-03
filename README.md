@@ -1,2 +1,2 @@
 # PHPboilerplate
-Really simple boilerplate for PHP simple projects
+Really simple boilerplate for PHP projects
