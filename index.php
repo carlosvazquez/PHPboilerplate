@@ -1,4 +1,8 @@
 <?php
+
+  use App\Core\Router;
+  use App\Core\Request;
+
   require 'vendor/autoload.php';
   $query = require 'core/bootstrap.php';
   

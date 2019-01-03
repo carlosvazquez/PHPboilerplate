@@ -17,22 +17,18 @@
     <?php 
         include('partials/navigation.php');
     ?>
-    <h1>Home</h1>
+    <h1>Users</h1>
     <ul class="list-unstyled">
         <?php
-        foreach($tasks as $task) {
-            $status = $task->completed == 1 ? 'completed' : 'incompleted';
-            echo '<li class="'.$status.'">'.$task->description.'</li>';
+        foreach($users as $user) {
+            echo '<li>'.$user->name.'</li>';
         }
         ?>    
     </ul>
     <hr>
-    <ul class="list-unstyled">
-        <?php
-        // foreach($users as $user) {
-        //     echo '<li>'.$user->name.'</li>';
-        // }
-        ?>    
-    </ul>
+    <form method="POST" action="/users">
+        <input id="name" name="name" class="form-control" type="text">
+        <button type="submit">Enviar</button>
+    </form>
 </body>
 </html>

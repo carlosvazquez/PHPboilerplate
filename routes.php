@@ -4,4 +4,5 @@
     $router->get('about','PagesController@about');
     $router->get('contact','PagesController@contact');
 
-    $router->post('names','NamesController@add');
+    $router->get('users','UsersController@index');
+    $router->post('users','UsersController@store');

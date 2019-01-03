@@ -9,7 +9,7 @@ class QueryBuilder
     }
     public function selectAll($table)
     {   
-        $table = $this->sanitizeInput($table);
+        $table = sanitizeInput($table);
         $sql = "select * from {$table}";
         $statement = $this->pdo->prepare($sql);
         $statement->execute();
@@ -18,6 +18,7 @@ class QueryBuilder
     }
     public function insert($table, $parameters)
     {
+        $parameters = array_map('sanitizeInput', $parameters);
         try {
             $sql = sprintf(
                 'insert into %s (%s) values (%s)',
@@ -30,10 +31,5 @@ class QueryBuilder
         } catch(PDOException $e) {
             $e->getMessage();
         }
-    }
-
-    private function sanitizeInput($input)
-    {
-        return strip_tags(trim($input));
     }
 }
