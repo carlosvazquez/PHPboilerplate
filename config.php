@@ -6,10 +6,10 @@ return [
         'database' => [
                 'driver'   => 'mysql',
                 'username' => 'root',
-                'password' => '',
-                'host'     => 'localhost',
-                'dbname'   => 'phpboilerplate',
-                'port'     => 5432,
+                'password' => 'secret',
+                'host'     => '127.0.0.1',
+                'dbname'   => 'db_name',
+                'port'     => 3306,
                 'charset'  => 'utf8',
                 'prefix'   => '',
                 'options' => [

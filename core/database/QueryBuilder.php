@@ -5,10 +5,12 @@ declare(strict_types=1);
 class QueryBuilder
 {
     protected $pdo;
+
     public function __construct($pdo)
     {
         $this->pdo = $pdo;
     }
+
     public function selectAll($table)
     {
         $table = sanitizeInput($table);
@@ -18,6 +20,7 @@ class QueryBuilder
 
         return $statement->fetchAll(PDO::FETCH_CLASS);
     }
+
     public function insert($table, $parameters)
     {
         $parameters = array_map('sanitizeInput', $parameters);
