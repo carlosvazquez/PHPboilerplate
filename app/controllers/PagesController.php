@@ -10,7 +10,7 @@ class PagesController
     {
         $tasks = App::get('database')->selectAll('todos');
 
-        return view('home',compact('tasks'));
+        return view('home', compact('tasks'));
     }
     public function about()
     {
@@ -21,4 +21,3 @@ class PagesController
         return view('contact');
     }
 }
-

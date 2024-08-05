@@ -8,12 +8,12 @@ class QueryBuilder
         $this->pdo = $pdo;
     }
     public function selectAll($table)
-    {   
+    {
         $table = sanitizeInput($table);
         $sql = "select * from {$table}";
         $statement = $this->pdo->prepare($sql);
         $statement->execute();
-        
+
         return $statement->fetchAll(PDO::FETCH_CLASS);
     }
     public function insert($table, $parameters)

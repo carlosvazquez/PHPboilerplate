@@ -7,7 +7,7 @@
             $status = $task->completed == 1 ? 'completed' : 'incompleted';
             echo '<li class="'.$status.'">'.$task->description.'</li>';
         }
-        ?>    
+?>    
 </ul>
 <hr>
 <?php include('partials/footer.php'); ?>

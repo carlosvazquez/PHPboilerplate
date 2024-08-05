@@ -14,7 +14,7 @@
     </style>
 </head>
 <body>
-    <?php 
+    <?php
         include('partials/navigation.php');
     ?>
     <h1>Users</h1>
@@ -23,7 +23,7 @@
         foreach($users as $user) {
             echo '<li>'.$user->name.'</li>';
         }
-        ?>    
+    ?>    
     </ul>
     <hr>
     <form method="POST" action="/users">
