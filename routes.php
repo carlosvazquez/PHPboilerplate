@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 $router->get('', 'PagesController@home');
 $router->get('about', 'PagesController@about');
 $router->get('contact', 'PagesController@contact');

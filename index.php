@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use App\Core\Router;
 use App\Core\Request;
 
