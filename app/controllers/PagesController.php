@@ -12,10 +12,12 @@ class PagesController
 
         return view('home', compact('tasks'));
     }
+
     public function about()
     {
         return view('about');
     }
+
     public function contact()
     {
         return view('contact');
